@@ -1,0 +1,154 @@
+
+// Bootstrap Variables
+$icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
+
+// Import Bootstrap
+@import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+body{
+  background-color: rgba(245, 245, 241, 1);
+}
+
+header{
+  background-color: white;
+  padding-top: 50px;
+  padding-right: 125px;
+  padding-left: 125px;
+  border-bottom: 2px solid lightgrey;
+}
+.sidebar{
+  display: inline-block;
+  float: left;
+}
+.btn-default{
+  background-color: turquoise;
+}
+
+.categories-box{
+  border: 2px solid white;
+  background-color: white;
+  line-height: 25px;
+}
+
+.specifications{
+  border: 2px solid white;
+  background-color: white;
+  width: 200px;
+}
+
+.refine{
+  border: 2px solid rgba(245, 245, 241, 1);
+  background-color: rgba(245, 245, 241, 1);
+  width: 200px;
+}
+
+.form-inline{
+  display: inline-block;
+}
+
+.name{
+  font-family: times;
+  font-size: 50px;
+  color: orange;
+  display: inline-block;
+  margin-top: -11px;
+}
+.profile-nav{
+  float: right;
+  color: turquoise;
+  display: inline-block;
+  text-align: center;
+}
+.sign-in{
+  border: 10px blue;
+  border-color: turquoise;
+  border-radius: 10% ;
+}
+.primary-nav{
+  text-align:center;
+  border-top: 2px solid lightgrey;
+  margin-top: 40px;
+  font-size: 16.5px;
+  color: grey;
+}
+
+.clothing-nav,
+.jewelry-nav,
+.craft-nav,
+.wedding-nav,
+.entertainment-nav,
+.home-nav,
+.kids-nav,
+.vintage-nav{
+  margin-right: 15px;
+}
+
+.results,
+.categories,
+.refine,
+.item-type,{
+  font-size: 13px;
+  margin-left: 3px;
+}
+
+input[type="radio"],
+input[type="checkbox"]{
+  margin-right: 10px;
+}
+
+.categories-box{
+  display: block;
+}
+.specifications{
+  display: inline-block;
+}
+.specs{
+  width: 100%;
+}
+
+.spacer{
+  font-size: 10px;
+  color: darkgrey;
+}
+
+
+.select-categories{
+  font-size: 11px;
+  color: navy;
+  list-style: none;
+}
+
+
+
+.direction{
+  width: 200px;
+}
+.min,
+.to,
+.max{
+  display: inline-block;
+}
+
+
+.display-photos{
+  display: inline-block;
+  width: 100%;
+}
+.head-pictures{
+  display: inline-block;
+  width: 100%
+}
+.subset-pictures{
+  display: inline-block;
+  width: 100%;
+}
