@@ -1,62 +1,75 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 "use strict";
+var $ = require('jQuery');
+var handlebars = require('handlebars');
 
 var results;
 var currencyCode;
 var title;
 var shopName;
+var searchTopic = 'yarn';
+var urlKey = 'https://api.etsy.com/v2/listings/active.js?api_key=0p6m9qyg9nb4v916y83787n2&keywords=';
+var url;
 
-(function(){
+$( '.search' ).on('click', function() {
+  $('.category-list').empty();
+
+  searchTopic = $('#search').val();
+  startProgram();
+
+});
+
+startProgram();
+
+function startProgram(){
   'use strict';
-
-
-var $ = require('jQuery');
-var handlebars = require('handlebars');
-
-console.log(handlebars);
-
-var source   = $("#entry-template").html();
-var template = handlebars.compile(source);
-var url = "https://api.etsy.com/v2/listings/active.js?api_key=0p6m9qyg9nb4v916y83787n2&keywords=yarn&includes=Images,Shop";
-
-function fetchJSONP(url, callback) {
+  url = urlKey + searchTopic + '&includes=Images,Shop';
+  var source = $('#category-template').html();
+  var template = handlebars.compile(source);
+  function fetchJSONP(url, callback) {
     var callbackName = 'jsonp_callback_' + Math.round(100000 * Math.random());
     var script = document.createElement('script');
 
     window[callbackName] = function(data) {
-        delete window[callbackName];
-        document.body.removeChild(script);
-        callback(data);
+      delete window[callbackName];
+      document.body.removeChild(script);
+      callback(data);
     };
-
     script.src = url + (url.indexOf('?') >= 0 ? '&' : '?') + 'callback=' + callbackName;
     document.body.appendChild(script);
-}
+  }
 
-function logData(data) {
-  data.results.forEach(function(value, i, thisArray){
-    var context = {
-      currencyCode: thisArray[i].currency_code,
-      title: thisArray[i].title,
-      shopName: thisArray[i].Shop.shop_name,
-    };
-    $(".spacer").append(template(context));
-  });
-}
-fetchJSONP(url, logData);
+  function logData(data) {
+    var arrayData = data.results;
+    arrayData.forEach(function(value, i, thisArray){
+      var context = {
+        image: thisArray[i].Images[0].url_fullxfull,
+        currencyCode: thisArray[i].currency_code,
+        itemPrice: thisArray[i].price,
+        title: thisArray[i].title,
+        shopName: thisArray[i].Shop.shop_name,
+      };
+      console.log(context);
 
-function updatePhotos(data){
-  data.Images.forEach(function(value, i, thisArray){
-    var etsyPhotos = $("#photos").html();
-    $(".spacer").append(template(context));
-  });
-}
-
-  var theTemplateScript = $("#etsy-images").html();
-  var theTemplate = handlebars.compile(theTemplateScript);
+      $('.category-list').append(template(context));
+    });
+  }
+  fetchJSONP(url, logData);
 
 
-}());
+
+  // function updatePhotos(data){
+  //   data.Images.forEach(function(value, i, thisArray){
+  //     var etsyPhotos = $('#photos').html();
+  //     $('.spacer').append(template(context));
+  //   });
+  // }
+
+  // var theTemplateScript = $('#etsy-images').html();
+  // var theTemplate = handlebars.compile(theTemplateScript);
+
+
+};
 
 },{"handlebars":32,"jQuery":44}],2:[function(require,module,exports){
 (function (process,__filename){

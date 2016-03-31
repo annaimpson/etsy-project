@@ -134,58 +134,33 @@
               </div>
             </div>
           </div>
-          <div>
-            <script id="entry-template" type="text/x-handlebars-template">
-            <div class="entry">
-              <h1>{{title}}</h1>
-              <div class="body">
-                {{body}}
-              </div>
-            </div>
-            </script>
-            <script id="etsy-images" type="text/x-handlebars-template">
-              <img class="product-photos" src="{{imgURL}}">
-            </script>
+          <div col-md-9 main-body>
+            <div class="topSearch">Top Searches for "yarn"</div>
+            <div class="row category-list">
           </div>
-        </div>
-        <div class="col-md-9 spacer">
-          <img src="{{Image}}" alt="">
+      </div>
+    </div>
 
-        </div>
 
-        <!-- <div class="display-photos col-md-9">
-          <div class="row">
-            <div class="head-pictures">
-              <div class="col-md-6">
-                <img src="http://unsplash.it/g/300/250" alt="">
-                  <span>Craft Supplies &amp; Tools</span>
-              </div>
-              <div class="col-md-6">
-                <img src="http://unsplash.it/g/300/250" alt="">
-                  <span>Accessories</span>
-              </div>
-            </div>
-            <div class="row subset-pictures">
-              <div class ="col-md-4">
-                <img src="http://unsplash.it/g/175/175" alt="">
-                  <span>Home &amp; Living</span>
-              </div>
-              <div class ="col-md-4">
-                <img src="http://unsplash.it/g/175/175" alt="">
-                  <span>Clothing</span>
-              </div>
-              <div class ="col-md-4">
-                <img src="http://unsplash.it/g/175/175" alt="">
-                  <span>Jewelry</span>
-              </div>
-            </div>
-          </div>
-        </div> -->
-  </div>
+
+  <script id="special-category-template" type="text/x-handlebars-template">
+    <div class="col-md-4 specialCategory-img">
+      <img src= {{image}} alt="">
+    </div>
+  </script>
+
+  <script id="category-template" type="text/x-handlebars-template">
+    <div class="col-md-4 product-info">
+      <img src= {{image}} alt="">
+      <div class = "text">
+        <p class = "description">{{title}}</p>
+        <p class = "price">{{currency_code}} {{price}}</p>
+        <p class = "make">{{manufacturer}}</p>
+      </div>
+    </div>
+  </script>
 
     <script src="js/bundle.js"></script>
-    <script id="space" type="text/x-handlebars-template"></script>
-    <script id="photos" type="text/x-handlebars-template"></script>
 
   </body>
 </html>
