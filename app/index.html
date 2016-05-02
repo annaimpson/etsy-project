@@ -42,123 +42,125 @@
 
 
     <div class="container">
+      <div class="row">
 
-      <div class="sidebar">
-        <div class="row">
-          <div class="col-md-3">
+
+        <div class="col-md-3">
+          <div class="row">
             <div class="direction">
               <h4 class="results">Show results for:</h4>
-
-              <div class="categories-box">
-                <span class="all-categories">
-                  <h5 class="categories">All Categories</h5>
-                    <ul class="select-categories">
-                      <li>Craft Supplies &amp; Tools</li>
-                      <li>Accessories</li>
-                      <li>Home &amp; Living</li>
-                      <li>Clothing</li>
-                      <li>Jewelry</li>
-                      <li>Toys &amp; Games</li>
-                      <li>Bags &amp; Purses</li>
-                      <li>Art &amp; Collectibles</li>
-                      <li>Bath &amp; Beauty</li>
-                      <li>Paper &amp; Party Supplies</li>
-                      <li>Shoes</li>
-                      <li>Pet Supplies</li>
-                      <li>Books, Movies, &amp; Music</li>
-                      <li>Weddings</li>
-                      <li>Electronics &amp; Accessories</li>
-                    </ul>
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="specifications">
-          <div class="row">
-            <div class="col-md-3 specs">
-              <h5 class="refine">Refine your search</h5>
-
-              <h5 class="item-type">Item Type</h5>
-                <form class="item-buttons">
-                  <input type="radio" name="item" value="All-Items" checked>All Items<br>
-                  <input type="radio" name="item" value="Handmade">Handmade<br>
-                  <input type="radio" name="item" value="Vintage">Vintage
-                </form>
-                <h5 class="price">Price ($)</h5>
-                  <form class="min">
-                    <input type="number" name="quantity" min="0" max="2000">
-                  </form>
-                  <h6 class="to">to</h6>
-                  <form class="max">
-                    <input type="number" name="quantity" min="0" max="10000">
-                  </form>
-
-                <h5 class="color-filter">Filter by Color</h5>
-                  <span class="red"></span>
-                  <span class="orange"></span>
-                  <span class="yellow"></span>
-                  <span class= "green"></span>
-                  <span class= "blue"></span>
-                  <span class="purple"></span>
-                  <span class="black"></span>
-                  <span class="white"></span>
-
-                <h5 class="ordering-options">Ordering Options</h5>
-                  <form action="ordering" method="get">
-                    <input type="checkbox" name="ordering" value="gift-card">Accepts Etsy Gift Cards<br>
-                    <input type="checkbox" name="ordering" value="custom" checked="checked">Customizable<br>
-                  </form>
-
-                <h5 class="shop-location">Shop Location</h5>
-                <form>
-                  <input type="radio" name="item" value="anywhere" checked>Anywhere<br>
-                  <input type="radio" name="item" value="US">United States
-                </form>
-
-                <h5 class="ship-to">Ship To</h5>
-                <div class="bfh-selectbox bfh-countries" data-country="US" data-flags="true">
-                  <input type="hidden" value="">
-                  <a class="bfh-selectbox-toggle" role="button" data-toggle="bfh-selectbox" href="#">
-                    <span class="bfh-selectbox-option input-medium" data-option=""></span>
-                    <b class="caret"></b>
-                  </a>
-                  <div class="bfh-selectbox-options">
-                    <input type="text" class="bfh-selectbox-filter">
-                    <div role="listbox">
-                    <ul role="option">
-                    </ul>
-                    </div>
-                  </div>
+                <div class="categories-box">
+                  <span class="all-categories">
+                    <h5 class="categories">All Categories</h5>
+                      <ul class="select-categories">
+                        <li>Craft Supplies &amp; Tools</li>
+                        <li>Accessories</li>
+                        <li>Home &amp; Living</li>
+                        <li>Clothing</li>
+                        <li>Jewelry</li>
+                        <li>Toys &amp; Games</li>
+                        <li>Bags &amp; Purses</li>
+                        <li>Art &amp; Collectibles</li>
+                        <li>Bath &amp; Beauty</li>
+                        <li>Paper &amp; Party Supplies</li>
+                        <li>Shoes</li>
+                        <li>Pet Supplies</li>
+                        <li>Books, Movies, &amp; Music</li>
+                        <li>Weddings</li>
+                        <li>Electronics &amp; Accessories</li>
+                      </ul>
+                  </span>
                 </div>
               </div>
             </div>
+
+        <div class="specifications">
+          <div class="row">
+            <h5 class="refine">Refine your search</h5>
+
+            <h5 class="item-type">Item Type</h5>
+              <form class="item-buttons">
+                <input type="radio" name="item" value="All-Items" checked>All Items<br>
+                <input type="radio" name="item" value="Handmade">Handmade<br>
+                <input type="radio" name="item" value="Vintage">Vintage
+              </form>
+              <h5 class="price">Price ($)</h5>
+                <form class="min">
+                  <input type="number" name="quantity" min="0" max="2000">
+                </form>
+                <h6 class="to">to</h6>
+                <form class="max">
+                  <input type="number" name="quantity" min="0" max="10000">
+                </form>
+
+              <h5 class="color-filter">Filter by Color</h5>
+                <span class="red"></span>
+                <span class="orange"></span>
+                <span class="yellow"></span>
+                <span class= "green"></span>
+                <span class= "blue"></span>
+                <span class="purple"></span>
+                <span class="black"></span>
+                <span class="white"></span>
+
+              <h5 class="ordering-options">Ordering Options</h5>
+                <form action="ordering" method="get">
+                  <input type="checkbox" name="ordering" value="gift-card">Accepts Etsy Gift Cards<br>
+                  <input type="checkbox" name="ordering" value="custom" checked="checked">Customizable<br>
+                </form>
+
+              <h5 class="shop-location">Shop Location</h5>
+              <form>
+                <input type="radio" name="item" value="anywhere" checked>Anywhere<br>
+                <input type="radio" name="item" value="US">United States
+              </form>
+
+              <h5 class="ship-to">Ship To</h5>
+              <div class="bfh-selectbox bfh-countries" data-country="US" data-flags="true">
+                <input type="hidden" value="">
+                <a class="bfh-selectbox-toggle" role="button" data-toggle="bfh-selectbox" href="#">
+                  <span class="bfh-selectbox-option input-medium" data-option=""></span>
+                  <b class="caret"></b>
+                </a>
+                <div class="bfh-selectbox-options">
+                  <input type="text" class="bfh-selectbox-filter">
+                  <div role="listbox">
+                  <ul role="option">
+                  </ul>
+                  </div>
+                </div>
+              </div>
+
+            </div>
           </div>
-          <div col-md-9 main-body>
-            <div class="topSearch">Top Searches for "yarn"</div>
-            <div class="row category-list">
+        </div> <!-- end of sidebar 3-col -->
+
+
+        <div col-md-9 main-body>
+          <div class="topSearch">Top Searches for "yarn"</div>
+          <div class="row category-list"></div>
+        </div>
+
+      </div> <!--end of main row -->
+   </div>    <!--end of container -->
+
+
+      <script id="special-category-template" type="text/x-handlebars-template">
+        <div class="col-md-3 specialCategory-img">
+          <img src= {{image}} alt="">
+        </div>
+      </script>
+
+      <script id="category-template" type="text/x-handlebars-template">
+        <div class="col-md-3 product-info">
+          <img src= {{image}} alt="" class="thumbnail">
+          <div class = "text">
+            <p class = "description">{{title}}</p>
+            <p class = "price">{{currency_code}} {{price}}</p>
+            <p class = "make">{{manufacturer}}</p>
           </div>
-      </div>
-    </div>
-
-
-
-  <script id="special-category-template" type="text/x-handlebars-template">
-    <div class="col-md-4 specialCategory-img">
-      <img src= {{image}} alt="">
-    </div>
-  </script>
-
-  <script id="category-template" type="text/x-handlebars-template">
-    <div class="col-md-4 product-info">
-      <img src= {{image}} alt="">
-      <div class = "text">
-        <p class = "description">{{title}}</p>
-        <p class = "price">{{currency_code}} {{price}}</p>
-        <p class = "make">{{manufacturer}}</p>
-      </div>
-    </div>
-  </script>
+        </div>
+      </script>
 
     <script src="js/bundle.js"></script>
 

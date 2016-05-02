@@ -19,8 +19,6 @@ $( '.search' ).on('click', function() {
 
 });
 
-startProgram();
-
 function startProgram(){
   'use strict';
   url = urlKey + searchTopic + '&includes=Images,Shop';
@@ -55,21 +53,8 @@ function startProgram(){
     });
   }
   fetchJSONP(url, logData);
-
-
-
-  // function updatePhotos(data){
-  //   data.Images.forEach(function(value, i, thisArray){
-  //     var etsyPhotos = $('#photos').html();
-  //     $('.spacer').append(template(context));
-  //   });
-  // }
-
-  // var theTemplateScript = $('#etsy-images').html();
-  // var theTemplate = handlebars.compile(theTemplateScript);
-
-
 };
+startProgram();
 
 },{"handlebars":32,"jQuery":44}],2:[function(require,module,exports){
 (function (process,__filename){

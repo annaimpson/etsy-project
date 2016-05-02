@@ -5924,16 +5924,8 @@ input[type="checkbox"] {
 .max {
   display: inline-block; }
 
-.display-photos {
-  display: inline-block;
-  width: 100%; }
-
-.head-pictures {
-  display: inline-block;
-  width: 100%; }
-
-.subset-pictures {
-  display: inline-block;
-  width: 100%; }
+.thumbnail {
+  width: 300px;
+  height: 200px; }
 
 /*# sourceMappingURL=app.css.map */
